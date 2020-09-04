@@ -1,6 +1,6 @@
 #AVALIACAO: (Prof.Ronaldo)
 #CT0201 – Primeira contribuição da SEGUNDA etapa                                                      
-#Implementa o algoritmo HeapSort e imprimir os seguintes gráficos:                                   
+#Implementa o algoritmo HeapSort e imprimir o seguinte gráfico:                                   
 #                                                                                                      
 #   *Tamanho da lista de números x Tempo para ordenar pelo método                                                                               
 #                                                                                                      
