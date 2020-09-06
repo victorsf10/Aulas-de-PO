@@ -1,8 +1,3 @@
-#Victor Sousa Firmino
-#Pesquisa e Ordenação
-#Professor Ronaldo Fernandes
-#Engenharia de Computacao
-
 import random
 import time
 import timeit
@@ -169,15 +164,15 @@ class Tree:
             self.posOrder(atual.esq)
             self.posOrder(atual.dir)
             print(atual.item, end=" ")
-
-    def altura(self, atual):
-        if atual == None or atual.esq == None and atual.dir == None:
-            return 0
-        else:
-            if self.altura(atual.esq) > self.altura(atual.dir):
-                return 1 + self.altura(atual.esq)
-            else:
-                return 1 + self.altura(atual.dir)
+    #Para mais de 1mil elementos a altura não retorna um valor em tempo hábil
+    #def altura(self, atual):
+    #   if atual == None or atual.esq == None and atual.dir == None:
+    #       return 0
+    #    else:
+    #        if self.altura(atual.esq) > self.altura(atual.dir):
+    #          return 1 + self.altura(atual.esq) 
+    #        else:
+    #          return 1 + self.altura(atual.dir)
 
     def folhas(self, atual):
         if atual == None:
@@ -215,12 +210,13 @@ class Tree:
         self.posOrder(self.root)
         print("\n Exibindo em pre-ordem: ", end="")
         self.preOrder(self.root)
-        print("\n Altura da arvore: %d" % (self.altura(self.root)))
-        print(" Quantidade de folhas: %d" % (self.folhas(self.root)))
-        print(" Quantidade de Nós: %d" % (self.contarNos(self.root)))
+        #Para mais de 1mil elementos a altura não retorna um valor em tempo hábil
+        #print("\n Altura da arvore: %d" %(self.altura(self.root)))
+        print(" Quantidade de folhas: %d" %(self.folhas(self.root)))
+        print(" Quantidade de Nós: %d" %(self.contarNos(self.root)))
         if self.root != None:  # se arvore nao esta vazia
-            print(" Valor minimo: %d" % (self.minn().item))
-            print(" Valor maximo: %d" % (self.maxx().item))
+            print(" Valor minimo: %d" %(self.minn().item))
+            print(" Valor maximo: %d" %(self.maxx().item))
 
 
 #### fim da classe ####
@@ -285,5 +281,6 @@ while opcao != 5:
         fimPos= timeit.default_timer()
         resultadoPos = fimPos - inicioPos
         print("O tempo para exibir foi: %.10f" % resultadoPos)
+
     elif opcao == 5:
         break
